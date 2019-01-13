@@ -5,12 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Calculator"
         mc:Ignorable="d"
-         Title="Scientific Calculator" Height="356.546" Width="303.929"
+         Title="Scientific Calculator" Height="356.546" Width="356.614"
         ResizeMode="CanMinimize"
         WindowStartupLocation="CenterScreen">
     <Grid  RenderTransformOrigin="0.5,0.5" Margin="0,0,4,0">
 
-        <TextBox x:Name="txt_Main" HorizontalAlignment="Left" Height="31" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="270" FontFamily="Tahoma" FontSize="14" TextChanged="txt_Main_TextChanged" Text="0"/>
+        <TextBox x:Name="txt_Main" HorizontalAlignment="Left" Height="23" Margin="10,18,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="325" FontFamily="Tahoma" FontSize="14" TextChanged="txt_Main_TextChanged" Text="0"/>
         <Button x:Name="btn_N1" Content="1" HorizontalAlignment="Left" Height="50" Margin="10,101,0,0" VerticalAlignment="Top" Width="50" FontSize="14" Click="btn_Number_Click"/>
         <Button x:Name="btn_N8" Content="8" HorizontalAlignment="Left" Height="50" Margin="65,211,0,0" VerticalAlignment="Top" Width="50" Click="btn_Number_Click" FontSize="14"/>
         <Button x:Name="btn_N2" Content="2" HorizontalAlignment="Left" Height="50" Margin="65,101,0,0" VerticalAlignment="Top" Width="50" Click="btn_Number_Click" FontSize="14"/>
@@ -20,19 +20,23 @@
         <Button x:Name="btn_O4" Content="+" HorizontalAlignment="Left" Height="50" Margin="175,266,0,0" VerticalAlignment="Top" Width="50"  FontSize="18" Click="btn_O_Click"/>
         <Button x:Name="btn_O3" Content="-" HorizontalAlignment="Left" Height="50" Margin="175,211,0,0" VerticalAlignment="Top" Width="50" FontSize="18" Click="btn_O_Click"/>
         <Button x:Name="btn_O2" Content="×" HorizontalAlignment="Left" Height="50" Margin="175,156,0,0" VerticalAlignment="Top" Width="50"  FontSize="18" Click="btn_O_Click"/>
-        <Button x:Name="btn_O1" Content="÷" HorizontalAlignment="Left" Height="50" Margin="175,101,0,0" VerticalAlignment="Top" Width="50" Click="btn_O_Click" FontSize="18"/>
+        <Button x:Name="btn_O1" Content="÷" HorizontalAlignment="Left" Height="50" Margin="175,101,0,0" VerticalAlignment="Top" Width="50" Click="btn_O_Click" FontSize="18" />
         <Button x:Name="btn_Equal" Content="=" HorizontalAlignment="Left" Height="50" Margin="120,266,0,0" VerticalAlignment="Top" Width="50" FontSize="18" Click="btn_Equal_Click" Grid.ColumnSpan="2"/>
         <Button x:Name="btn_Dot" Content="." HorizontalAlignment="Left" Height="50" Margin="65,266,0,0" VerticalAlignment="Top" Width="50" Click="btn_Dot_Click" FontSize="14"/>
         <Button x:Name="btn_N" Content="0" HorizontalAlignment="Left" Height="50" Margin="10,266,0,0" VerticalAlignment="Top" Width="50" Click="btn_Number_Click" FontSize="14"/>
         <Button x:Name="btn_N9" Content="9" HorizontalAlignment="Left" Height="50" Margin="120,211,0,0" VerticalAlignment="Top" Width="50" Click="btn_Number_Click" FontSize="14" Grid.ColumnSpan="2"/>
         <Button x:Name="btn_N6" Content="6" HorizontalAlignment="Left" Height="50" Margin="120,156,0,0" VerticalAlignment="Top" Width="50" Click="btn_Number_Click" FontSize="14" Grid.ColumnSpan="2"/>
         <Button x:Name="btn_N3" Content="3" HorizontalAlignment="Left" Height="50" Margin="120,101,0,0" VerticalAlignment="Top" Width="50" Click="btn_Number_Click" FontSize="14" Grid.ColumnSpan="2"/>
+        <Button x:Name="btn_Sin" Content="Sin" HorizontalAlignment="Left" Height="50" Margin="285,101,0,0" VerticalAlignment="Top" Width="50" FontSize="14" Click="btn_Sin_Click"/>
         <Button x:Name="btn_Pow" Content="^" HorizontalAlignment="Left" Height="50" Margin="230,211,0,0" VerticalAlignment="Top" Width="50"  FontSize="14" Click="btn_O_Click"/>
+        <Button x:Name="btn_Cos" Content="Cos" HorizontalAlignment="Left" Height="50" Margin="285,156,0,0" VerticalAlignment="Top" Width="50" FontSize="14" Click="btn_Cos_Click"/>
+        <Button x:Name="btn_Log" Content="Log" HorizontalAlignment="Left" Height="50" Margin="285,211,0,0" VerticalAlignment="Top" Width="50"  FontSize="14" Click="btn_Log_Click"/>
         <Button x:Name="btn_Radical" Content="√" HorizontalAlignment="Left" Height="50" Margin="230,157,0,0" VerticalAlignment="Top" Width="50"  FontSize="14" Click="btn_Radical_Click"/>
-        <Button x:Name="btn_Fact" Content="!" HorizontalAlignment="Left" Height="50" Margin="230,102,0,0" VerticalAlignment="Top" Width="50"  FontSize="14" Click="btn_Fact_Click"/>
+        <Button x:Name="btn_Fact" Content="!" HorizontalAlignment="Left" Height="50" Margin="230,101,0,0" VerticalAlignment="Top" Width="50"  FontSize="14" Click="btn_Fact_Click"/>
         <Button x:Name="btn_Mod" Content="Mod" HorizontalAlignment="Left" Height="50" Margin="230,266,0,0" VerticalAlignment="Top" Width="50"  FontSize="14" Click="btn_O_Click"/>
-        <Button x:Name="btn_Clear" Content="C" HorizontalAlignment="Left" Height="50" Margin="10,46,0,0" VerticalAlignment="Top" Width="215" FontSize="18" Click="btn_Clear_Click"/>
-        <Button x:Name="btn_Remove" Content="⬅" HorizontalAlignment="Left" Height="50" Margin="230,47,0,0" VerticalAlignment="Top" Width="50" FontSize="22" Click="btn_Remove_Click"/>
+        <Button x:Name="btn_Tan" Content="Tan" HorizontalAlignment="Left" Height="50" Margin="285,266,0,0" VerticalAlignment="Top" Width="50"  FontSize="14" Click="btn_Tan_Click"/>
+        <Button x:Name="btn_Clear" Content="C" HorizontalAlignment="Left" Height="50" Margin="10,46,0,0" VerticalAlignment="Top" Width="270" FontSize="18" Click="btn_Clear_Click"/>
+        <Button x:Name="btn_Remove" Content="⬅" HorizontalAlignment="Left" Height="50" Margin="285,46,0,0" VerticalAlignment="Top" Width="50" FontSize="22" Click="btn_Remove_Click"/>
 
     </Grid>
 </Window>

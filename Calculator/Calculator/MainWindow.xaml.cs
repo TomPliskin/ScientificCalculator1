@@ -113,6 +113,113 @@ namespace Calculator
             }
         }
 
+        private void btn_Sin_Click(object sender, RoutedEventArgs e)
+        {
+            if (Operator == "")
+                txt_Main.Text = (Math.Sin(double.Parse(txt_Main.Text))).ToString();
+            else if (num1 != 0 && Operator != "" && num2 == 0)
+                txt_Main.Text = (Math.Sin(double.Parse(num1.ToString()))).ToString();
+            else
+            {
+                num2 = decimal.Parse(txt_Main.Text);
+                ////////////////////////////////
+                switch (Operator)
+                {
+                    case "+":
+                        txt_Main.Text = (num1 + num2).ToString();
+                        break;
+                    case "-":
+                        txt_Main.Text = (num1 - num2).ToString();
+                        break;
+                    case "×":
+                        txt_Main.Text = (num1 * num2).ToString();
+                        break;
+                    case "÷":
+                        txt_Main.Text = (num1 / num2).ToString();
+                        break;
+                    case "^":
+                        txt_Main.Text = (Math.Pow(double.Parse(num1.ToString()), double.Parse(num2.ToString()))).ToString();
+                        break;
+                    case "Mod":
+                        txt_Main.Text = (num1 % num2).ToString();
+                        break;
+                }
+
+                txt_Main.Text = (Math.Sin(double.Parse(txt_Main.Text))).ToString();
+            }
+        }
+
+        private void btn_Cos_Click(object sender, RoutedEventArgs e)
+        {
+            if (Operator == "")
+                txt_Main.Text = (Math.Cos(double.Parse(txt_Main.Text))).ToString();
+            else if (num1 != 0 && Operator != "" && num2 == 0)
+                txt_Main.Text = (Math.Cos(double.Parse(num1.ToString()))).ToString();
+            else
+            {
+                num2 = decimal.Parse(txt_Main.Text);
+                ////////////////////////////////
+                switch (Operator)
+                {
+                    case "+":
+                        txt_Main.Text = (num1 + num2).ToString();
+                        break;
+                    case "-":
+                        txt_Main.Text = (num1 - num2).ToString();
+                        break;
+                    case "×":
+                        txt_Main.Text = (num1 * num2).ToString();
+                        break;
+                    case "÷":
+                        txt_Main.Text = (num1 / num2).ToString();
+                        break;
+                    case "^":
+                        txt_Main.Text = (Math.Pow(double.Parse(num1.ToString()), double.Parse(num2.ToString()))).ToString();
+                        break;
+                    case "Mod":
+                        txt_Main.Text = (num1 % num2).ToString();
+                        break;
+                }
+
+                txt_Main.Text = (Math.Cos(double.Parse(txt_Main.Text))).ToString();
+            }
+        }
+
+        private void btn_Log_Click(object sender, RoutedEventArgs e)
+        {
+            if (Operator == "")
+                txt_Main.Text = (Math.Log(double.Parse(txt_Main.Text))).ToString();
+            else if (num1 != 0 && Operator != "" && num2 == 0)
+                txt_Main.Text = (Math.Log(double.Parse(num1.ToString()))).ToString();
+            else
+            {
+                num2 = decimal.Parse(txt_Main.Text);
+                ////////////////////////////////
+                switch (Operator)
+                {
+                    case "+":
+                        txt_Main.Text = (num1 + num2).ToString();
+                        break;
+                    case "-":
+                        txt_Main.Text = (num1 - num2).ToString();
+                        break;
+                    case "×":
+                        txt_Main.Text = (num1 * num2).ToString();
+                        break;
+                    case "÷":
+                        txt_Main.Text = (num1 / num2).ToString();
+                        break;
+                    case "^":
+                        txt_Main.Text = (Math.Pow(double.Parse(num1.ToString()), double.Parse(num2.ToString()))).ToString();
+                        break;
+                    case "Mod":
+                        txt_Main.Text = (num1 % num2).ToString();
+                        break;
+                }
+
+                txt_Main.Text = (Math.Log(double.Parse(txt_Main.Text))).ToString();
+            }
+        }
 
         private void btn_Radical_Click(object sender, RoutedEventArgs e)
         {
@@ -147,6 +254,42 @@ namespace Calculator
                 }
 
                 txt_Main.Text = (Math.Sqrt(double.Parse(txt_Main.Text))).ToString();
+            }
+        }
+
+        private void btn_Tan_Click(object sender, RoutedEventArgs e)
+        {
+            if (Operator == "")
+                txt_Main.Text = (Math.Tan(double.Parse(txt_Main.Text))).ToString();
+            else if (num1 != 0 && Operator != "" && num2 == 0)
+                txt_Main.Text = (Math.Tan(double.Parse(num1.ToString()))).ToString();
+            else
+            {
+                num2 = decimal.Parse(txt_Main.Text);
+                ////////////////////////////////
+                switch (Operator)
+                {
+                    case "+":
+                        txt_Main.Text = (num1 + num2).ToString();
+                        break;
+                    case "-":
+                        txt_Main.Text = (num1 - num2).ToString();
+                        break;
+                    case "×":
+                        txt_Main.Text = (num1 * num2).ToString();
+                        break;
+                    case "÷":
+                        txt_Main.Text = (num1 / num2).ToString();
+                        break;
+                    case "^":
+                        txt_Main.Text = (Math.Pow(double.Parse(num1.ToString()), double.Parse(num2.ToString()))).ToString();
+                        break;
+                    case "Mod":
+                        txt_Main.Text = (num1 % num2).ToString();
+                        break;
+                }
+
+                txt_Main.Text = (Math.Tan(double.Parse(txt_Main.Text))).ToString();
             }
         }
 
