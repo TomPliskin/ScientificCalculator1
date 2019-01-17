@@ -302,5 +302,10 @@ namespace Calculator
             }
             txt_Main.Text = f.ToString();
         }
+
+        private void Off_Click_1(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

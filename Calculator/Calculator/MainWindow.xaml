@@ -5,38 +5,360 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Calculator"
         mc:Ignorable="d"
-         Title="Scientific Calculator" Height="356.546" Width="356.614"
-        ResizeMode="CanMinimize"
-        WindowStartupLocation="CenterScreen">
-    <Grid  RenderTransformOrigin="0.5,0.5" Margin="0,0,4,0">
+         Title="Scientific Calculator"  SizeToContent="WidthAndHeight"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent">
+    
+    <Canvas Height="480
+            " Width="657">
+        <Path Stroke="Gray" StrokeThickness="2" Name="UIPath" Height="462.309" Stretch="Fill" Width="659.428" >
+            <Path.Fill>
+                <ImageBrush ImageSource="picture/logo.png" />
+            </Path.Fill>
+            <Path.Data>
+                <PathGeometry>
+                    <PathGeometry.Figures>
+                        <PathFigure StartPoint="17,97" IsClosed="true">
+                            <LineSegment Point="50,60" />
+                            <LineSegment Point="158,60" />
+                            <LineSegment Point="190,97" />
+                            <LineSegment Point="103,205" />
+                        </PathFigure>
+                    </PathGeometry.Figures>
+                </PathGeometry>
+            </Path.Data>
+        </Path>
+        
+        <Button Content="7" HorizontalAlignment="Left" VerticalAlignment="Top" Width="46" Height="31" FontSize="18" BorderThickness="2,2,2,1" Click="btn_Number_Click" Canvas.Left="181" Canvas.Top="149">
+            <Button.Foreground>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowColorKey}}"/>
+            </Button.Foreground>
+            <Button.BorderBrush>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowColorKey}}"/>
+            </Button.BorderBrush>
+            <Button.Background>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowTextColorKey}}"/>
+            </Button.Background>
+        </Button>
 
-        <TextBox x:Name="txt_Main" HorizontalAlignment="Left" Height="23" Margin="10,18,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="325" FontFamily="Tahoma" FontSize="14" TextChanged="txt_Main_TextChanged" Text="0"/>
-        <Button x:Name="btn_N1" Content="1" HorizontalAlignment="Left" Height="50" Margin="10,101,0,0" VerticalAlignment="Top" Width="50" FontSize="14" Click="btn_Number_Click"/>
-        <Button x:Name="btn_N8" Content="8" HorizontalAlignment="Left" Height="50" Margin="65,211,0,0" VerticalAlignment="Top" Width="50" Click="btn_Number_Click" FontSize="14"/>
-        <Button x:Name="btn_N2" Content="2" HorizontalAlignment="Left" Height="50" Margin="65,101,0,0" VerticalAlignment="Top" Width="50" Click="btn_Number_Click" FontSize="14"/>
-        <Button x:Name="btn_N5" Content="5" HorizontalAlignment="Left" Height="50" Margin="65,156,0,0" VerticalAlignment="Top" Width="50" Click="btn_Number_Click" FontSize="14"/>
-        <Button x:Name="btn_N7" Content="7" HorizontalAlignment="Left" Height="50" Margin="10,211,0,0" VerticalAlignment="Top" Width="50" Click="btn_Number_Click" FontSize="14"/>
-        <Button x:Name="btn_N4" Content="4" HorizontalAlignment="Left" Height="50" Margin="10,156,0,0" VerticalAlignment="Top" Width="50" Click="btn_Number_Click" FontSize="14"/>
-        <Button x:Name="btn_O4" Content="+" HorizontalAlignment="Left" Height="50" Margin="175,266,0,0" VerticalAlignment="Top" Width="50"  FontSize="18" Click="btn_O_Click"/>
-        <Button x:Name="btn_O3" Content="-" HorizontalAlignment="Left" Height="50" Margin="175,211,0,0" VerticalAlignment="Top" Width="50" FontSize="18" Click="btn_O_Click"/>
-        <Button x:Name="btn_O2" Content="×" HorizontalAlignment="Left" Height="50" Margin="175,156,0,0" VerticalAlignment="Top" Width="50"  FontSize="18" Click="btn_O_Click"/>
-        <Button x:Name="btn_O1" Content="÷" HorizontalAlignment="Left" Height="50" Margin="175,101,0,0" VerticalAlignment="Top" Width="50" Click="btn_O_Click" FontSize="18" />
-        <Button x:Name="btn_Equal" Content="=" HorizontalAlignment="Left" Height="50" Margin="120,266,0,0" VerticalAlignment="Top" Width="50" FontSize="18" Click="btn_Equal_Click" Grid.ColumnSpan="2"/>
-        <Button x:Name="btn_Dot" Content="." HorizontalAlignment="Left" Height="50" Margin="65,266,0,0" VerticalAlignment="Top" Width="50" Click="btn_Dot_Click" FontSize="14"/>
-        <Button x:Name="btn_N" Content="0" HorizontalAlignment="Left" Height="50" Margin="10,266,0,0" VerticalAlignment="Top" Width="50" Click="btn_Number_Click" FontSize="14"/>
-        <Button x:Name="btn_N9" Content="9" HorizontalAlignment="Left" Height="50" Margin="120,211,0,0" VerticalAlignment="Top" Width="50" Click="btn_Number_Click" FontSize="14" Grid.ColumnSpan="2"/>
-        <Button x:Name="btn_N6" Content="6" HorizontalAlignment="Left" Height="50" Margin="120,156,0,0" VerticalAlignment="Top" Width="50" Click="btn_Number_Click" FontSize="14" Grid.ColumnSpan="2"/>
-        <Button x:Name="btn_N3" Content="3" HorizontalAlignment="Left" Height="50" Margin="120,101,0,0" VerticalAlignment="Top" Width="50" Click="btn_Number_Click" FontSize="14" Grid.ColumnSpan="2"/>
-        <Button x:Name="btn_Sin" Content="Sin" HorizontalAlignment="Left" Height="50" Margin="285,101,0,0" VerticalAlignment="Top" Width="50" FontSize="14" Click="btn_Sin_Click"/>
-        <Button x:Name="btn_Pow" Content="^" HorizontalAlignment="Left" Height="50" Margin="230,211,0,0" VerticalAlignment="Top" Width="50"  FontSize="14" Click="btn_O_Click"/>
-        <Button x:Name="btn_Cos" Content="Cos" HorizontalAlignment="Left" Height="50" Margin="285,156,0,0" VerticalAlignment="Top" Width="50" FontSize="14" Click="btn_Cos_Click"/>
-        <Button x:Name="btn_Log" Content="Log" HorizontalAlignment="Left" Height="50" Margin="285,211,0,0" VerticalAlignment="Top" Width="50"  FontSize="14" Click="btn_Log_Click"/>
-        <Button x:Name="btn_Radical" Content="√" HorizontalAlignment="Left" Height="50" Margin="230,157,0,0" VerticalAlignment="Top" Width="50"  FontSize="14" Click="btn_Radical_Click"/>
-        <Button x:Name="btn_Fact" Content="!" HorizontalAlignment="Left" Height="50" Margin="230,101,0,0" VerticalAlignment="Top" Width="50"  FontSize="14" Click="btn_Fact_Click"/>
-        <Button x:Name="btn_Mod" Content="Mod" HorizontalAlignment="Left" Height="50" Margin="230,266,0,0" VerticalAlignment="Top" Width="50"  FontSize="14" Click="btn_O_Click"/>
-        <Button x:Name="btn_Tan" Content="Tan" HorizontalAlignment="Left" Height="50" Margin="285,266,0,0" VerticalAlignment="Top" Width="50"  FontSize="14" Click="btn_Tan_Click"/>
-        <Button x:Name="btn_Clear" Content="C" HorizontalAlignment="Left" Height="50" Margin="10,46,0,0" VerticalAlignment="Top" Width="270" FontSize="18" Click="btn_Clear_Click"/>
-        <Button x:Name="btn_Remove" Content="⬅" HorizontalAlignment="Left" Height="50" Margin="285,46,0,0" VerticalAlignment="Top" Width="50" FontSize="22" Click="btn_Remove_Click"/>
+        <TextBox Height="38" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left" Width="296" FontSize="20" Background="Black" BorderThickness="2" Name="txt_Main" Text="" Canvas.Left="181" Canvas.Top="51">
+            <TextBox.Foreground>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowColorKey}}" />
+            </TextBox.Foreground>
+        </TextBox>
 
-    </Grid>
-</Window>
+        <Button Name="btn_N8" Content="8" HorizontalAlignment="Left" VerticalAlignment="Top" Width="46" Height="31" FontSize="18" BorderThickness="2" Click="btn_Number_Click" Canvas.Left="232" Canvas.Top="149">
+            <Button.Foreground>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowColorKey}}"/>
+            </Button.Foreground>
+            <Button.BorderBrush>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowColorKey}}"/>
+            </Button.BorderBrush>
+            <Button.Background>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowTextColorKey}}"/>
+            </Button.Background>
+        </Button>
+        
+        <Button Name="btn_N9" Content="9" HorizontalAlignment="Left" VerticalAlignment="Top" Width="46" Height="31" FontSize="18" BorderThickness="2" Click="btn_Number_Click" Canvas.Left="283" Canvas.Top="149">
+            <Button.Foreground>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowColorKey}}"/>
+            </Button.Foreground>
+            <Button.BorderBrush>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowColorKey}}"/>
+            </Button.BorderBrush>
+            <Button.Background>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowTextColorKey}}"/>
+            </Button.Background>
+        </Button>
+        
+        <Button Content="÷" HorizontalAlignment="Left" VerticalAlignment="Top" Width="46" Height="31" FontSize="18" BorderThickness="2" Click="btn_O_Click" Canvas.Left="334" Canvas.Top="149">
+            <Button.Foreground>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowColorKey}}"/>
+            </Button.Foreground>
+            <Button.BorderBrush>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowColorKey}}"/>
+            </Button.BorderBrush>
+            <Button.Background>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowTextColorKey}}"/>
+            </Button.Background>
+        </Button>
+        
+        <Button Content="4" HorizontalAlignment="Left" VerticalAlignment="Top" Width="46" Height="31" FontSize="18" BorderThickness="2" Click="btn_Number_Click" Canvas.Left="181" Canvas.Top="180">
+            <Button.Foreground>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowColorKey}}"/>
+            </Button.Foreground>
+            <Button.BorderBrush>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowColorKey}}"/>
+            </Button.BorderBrush>
+            <Button.Background>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowTextColorKey}}"/>
+            </Button.Background>
+        </Button>
+        
+        <Button Content="5" HorizontalAlignment="Left" VerticalAlignment="Top" Width="46" Height="31" FontSize="18" BorderThickness="2" Click="btn_Number_Click" Canvas.Left="232" Canvas.Top="180">
+            <Button.Foreground>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowColorKey}}"/>
+            </Button.Foreground>
+            <Button.BorderBrush>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowColorKey}}"/>
+            </Button.BorderBrush>
+            <Button.Background>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowTextColorKey}}"/>
+            </Button.Background>
+        </Button>
+        
+        <Button Content="6" HorizontalAlignment="Left" VerticalAlignment="Top" Width="46" Height="31" FontSize="18" BorderThickness="2" Click="btn_Number_Click" Canvas.Left="283" Canvas.Top="180">
+            <Button.Foreground>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowColorKey}}"/>
+            </Button.Foreground>
+            <Button.BorderBrush>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowColorKey}}"/>
+            </Button.BorderBrush>
+            <Button.Background>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowTextColorKey}}"/>
+            </Button.Background>
+        </Button>
+        
+        <Button Content="log" HorizontalAlignment="Left" VerticalAlignment="Top" Width="46" Height="31" FontSize="18" BorderThickness="2" Click="btn_Log_Click" Canvas.Left="385" Canvas.Top="180">
+            <Button.Foreground>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowColorKey}}"/>
+            </Button.Foreground>
+            <Button.BorderBrush>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowColorKey}}"/>
+            </Button.BorderBrush>
+            <Button.Background>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowTextColorKey}}"/>
+            </Button.Background>
+        </Button>
+        
+        <Button Content="!" HorizontalAlignment="Left" VerticalAlignment="Top" Width="46" Height="31" FontSize="18" BorderThickness="2" Click="btn_Fact_Click" Canvas.Left="431" Canvas.Top="247">
+            <Button.Foreground>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowColorKey}}"/>
+            </Button.Foreground>
+            <Button.BorderBrush>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowColorKey}}"/>
+            </Button.BorderBrush>
+            <Button.Background>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowTextColorKey}}"/>
+            </Button.Background>
+        </Button>
+        
+        <Button Content="√" HorizontalAlignment="Left" VerticalAlignment="Top" Width="46" Height="31" FontSize="18" BorderThickness="2" Click="btn_Radical_Click" Canvas.Left="385" Canvas.Top="211">
+            <Button.Foreground>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowColorKey}}"/>
+            </Button.Foreground>
+            <Button.BorderBrush>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowColorKey}}"/>
+            </Button.BorderBrush>
+            <Button.Background>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowTextColorKey}}"/>
+            </Button.Background>
+        </Button>
+
+        <Button Content="×" HorizontalAlignment="Left" VerticalAlignment="Top" Width="46" Height="31" FontSize="18" BorderThickness="2" Click="btn_O_Click" Canvas.Left="334" Canvas.Top="180">
+            <Button.Foreground>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowColorKey}}"/>
+            </Button.Foreground>
+            <Button.BorderBrush>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowColorKey}}"/>
+            </Button.BorderBrush>
+            <Button.Background>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowTextColorKey}}"/>
+            </Button.Background>
+        </Button>
+        
+        <Button Content="Mod" HorizontalAlignment="Left" VerticalAlignment="Top" Width="46" Height="31" FontSize="18" BorderThickness="2" Click="btn_O_Click" Canvas.Left="334" Canvas.Top="105">
+            <Button.Foreground>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowColorKey}}"/>
+            </Button.Foreground>
+            <Button.BorderBrush>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowColorKey}}"/>
+            </Button.BorderBrush>
+            <Button.Background>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowTextColorKey}}"/>
+            </Button.Background>
+        </Button>
+        
+        <Button Content="cos" HorizontalAlignment="Left" VerticalAlignment="Top" Width="46" Height="31" FontSize="18" BorderThickness="2" Click="btn_Cos_Click" Canvas.Left="431" Canvas.Top="149">
+            <Button.Foreground>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowColorKey}}"/>
+            </Button.Foreground>
+            <Button.BorderBrush>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowColorKey}}"/>
+            </Button.BorderBrush>
+            <Button.Background>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowTextColorKey}}"/>
+            </Button.Background>
+        </Button>
+        
+        <Button Content="sin" HorizontalAlignment="Left" VerticalAlignment="Top" Width="46" Height="31" FontSize="18" BorderThickness="2" Click="btn_Sin_Click" Canvas.Left="385" Canvas.Top="149">
+            <Button.Foreground>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowColorKey}}"/>
+            </Button.Foreground>
+            <Button.BorderBrush>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowColorKey}}"/>
+            </Button.BorderBrush>
+            <Button.Background>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowTextColorKey}}"/>
+            </Button.Background>
+        </Button>
+        
+        <Button Content="^" HorizontalAlignment="Left" VerticalAlignment="Top" Width="46" Height="31" FontSize="18" BorderThickness="2" Click="btn_O_Click" Canvas.Left="431" Canvas.Top="211">
+            <Button.Foreground>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowColorKey}}"/>
+            </Button.Foreground>
+            <Button.BorderBrush>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowColorKey}}"/>
+            </Button.BorderBrush>
+            <Button.Background>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowTextColorKey}}"/>
+            </Button.Background>
+        </Button>
+        
+        <Button Content="tan" HorizontalAlignment="Left" VerticalAlignment="Top" Width="46" Height="31" FontSize="18" BorderThickness="2" Click="btn_Tan_Click" Canvas.Left="431" Canvas.Top="180">
+            <Button.Foreground>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowColorKey}}"/>
+            </Button.Foreground>
+            <Button.BorderBrush>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowColorKey}}"/>
+            </Button.BorderBrush>
+            <Button.Background>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowTextColorKey}}"/>
+            </Button.Background>
+        </Button>
+        
+        <Button Content="." HorizontalAlignment="Left" VerticalAlignment="Top" Width="46" Height="31" FontSize="18" BorderThickness="2" Click="btn_Dot_Click" Canvas.Left="385" Canvas.Top="247">
+            <Button.Foreground>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowColorKey}}"/>
+            </Button.Foreground>
+            <Button.BorderBrush>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowColorKey}}"/>
+            </Button.BorderBrush>
+            <Button.Background>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowTextColorKey}}"/>
+            </Button.Background>
+        </Button>
+        
+        <Button Content="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="46" Height="31" FontSize="18" BorderThickness="2" Click="btn_Number_Click" Canvas.Left="181" Canvas.Top="211">
+            <Button.Foreground>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowColorKey}}"/>
+            </Button.Foreground>
+            <Button.BorderBrush>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowColorKey}}"/>
+            </Button.BorderBrush>
+            <Button.Background>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowTextColorKey}}"/>
+            </Button.Background>
+        </Button>
+        
+        <Button Content="2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="46" Height="31" FontSize="18" BorderThickness="2" Click="btn_Number_Click" Canvas.Left="232" Canvas.Top="211">
+            <Button.Foreground>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowColorKey}}"/>
+            </Button.Foreground>
+            <Button.BorderBrush>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowColorKey}}"/>
+            </Button.BorderBrush>
+            <Button.Background>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowTextColorKey}}"/>
+            </Button.Background>
+        </Button>
+        
+        <Button Content="3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="46" Height="31" FontSize="18" BorderThickness="2" Click="btn_Number_Click" Canvas.Left="283" Canvas.Top="211">
+            <Button.Foreground>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowColorKey}}"/>
+            </Button.Foreground>
+            <Button.BorderBrush>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowColorKey}}"/>
+            </Button.BorderBrush>
+            <Button.Background>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowTextColorKey}}"/>
+            </Button.Background>
+        </Button>
+        
+        <Button Content="-" HorizontalAlignment="Left" VerticalAlignment="Top" Width="46" Height="31" FontSize="18" BorderThickness="2" Click="btn_O_Click" Canvas.Left="334" Canvas.Top="211">
+            <Button.Foreground>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowColorKey}}"/>
+            </Button.Foreground>
+            <Button.BorderBrush>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowColorKey}}"/>
+            </Button.BorderBrush>
+            <Button.Background>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowTextColorKey}}"/>
+            </Button.Background>
+        </Button>
+        
+        <Button Content="0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="46" Height="31" FontSize="18" BorderThickness="2" Click="btn_Number_Click" Canvas.Left="181" Canvas.Top="247">
+            <Button.Foreground>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowColorKey}}"/>
+            </Button.Foreground>
+            <Button.BorderBrush>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowColorKey}}"/>
+            </Button.BorderBrush>
+            <Button.Background>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowTextColorKey}}"/>
+            </Button.Background>
+        </Button>
+        
+        <Button Content="=" HorizontalAlignment="Left" VerticalAlignment="Top" Width="97" Height="31" FontSize="18" BorderThickness="2" Click="btn_Equal_Click" Canvas.Left="232" Canvas.Top="247">
+            <Button.Foreground>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowColorKey}}"/>
+            </Button.Foreground>
+            <Button.BorderBrush>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowColorKey}}"/>
+            </Button.BorderBrush>
+            <Button.Background>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowTextColorKey}}"/>
+            </Button.Background>
+        </Button>
+        
+        <Button Content="+" HorizontalAlignment="Left" VerticalAlignment="Top" Width="46" Height="31" FontSize="18" BorderThickness="2" Click="btn_O_Click" Canvas.Left="334" Canvas.Top="247">
+            <Button.Foreground>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowColorKey}}"/>
+            </Button.Foreground>
+            <Button.BorderBrush>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowColorKey}}"/>
+            </Button.BorderBrush>
+            <Button.Background>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowTextColorKey}}"/>
+            </Button.Background>
+        </Button>
+        
+        <Button Content="Off" HorizontalAlignment="Left" VerticalAlignment="Top" Width="92" Height="31" FontSize="18" BorderThickness="2" Click="Off_Click_1" Canvas.Left="385" Canvas.Top="105">
+            <Button.Foreground>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowColorKey}}"/>
+            </Button.Foreground>
+            <Button.BorderBrush>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowColorKey}}"/>
+            </Button.BorderBrush>
+            <Button.Background>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowTextColorKey}}"/>
+            </Button.Background>
+        </Button>
+        
+        <Button Content="C" HorizontalAlignment="Left" VerticalAlignment="Top" Width="46" Height="31" FontSize="18" BorderThickness="2" Click="btn_Clear_Click" Canvas.Left="181" Canvas.Top="105">
+            <Button.Foreground>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowColorKey}}"/>
+            </Button.Foreground>
+            <Button.BorderBrush>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowColorKey}}"/>
+            </Button.BorderBrush>
+            <Button.Background>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowTextColorKey}}"/>
+            </Button.Background>
+        </Button>
+        
+        <Button Content="⬅" HorizontalAlignment="Left" VerticalAlignment="Top" Width="46" Height="31" FontSize="18" BorderThickness="2" Click="btn_Remove_Click" Canvas.Left="232" Canvas.Top="105">
+            <Button.Foreground>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowColorKey}}"/>
+            </Button.Foreground>
+            <Button.BorderBrush>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowColorKey}}"/>
+            </Button.BorderBrush>
+            <Button.Background>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowTextColorKey}}"/>
+            </Button.Background>
+        </Button>
+
+    </Canvas>
+</Window>  
